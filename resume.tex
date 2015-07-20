@@ -1,0 +1,166 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2015 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+
+% The following two lines are needed to fix a MacTex compatibility issue
+% Thanks to Tony Blake for finding this fix!
+\usepackage{etoolbox}
+\robustify\cftdotfill
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Furqan Tariq} & {+92 344 8451912} \\
+Sharqpur Khurd p/o 39250 & furqantrq@gmail.com \\
+Kot Abdul Malik, Lahore, Pakistan & github/furqantariq \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Objective}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{center}
+  \parbox{6.762in}{To obtain a position where I can optimize my skills in the IT industry and gain a high level of hands-on experience and to obtain a position in a stable work environment with growth potential.}
+  \end{center}
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Punjab University College of Information Technology}{Lahore, PK}{B.S Computer Science}{2010 - 2014}
+	\begin{itemize}
+		\resitem{Undergraduate Thesis: Routing in Data Center Network}
+		\resitem{Graduated with 3.47 CGPA}
+	\end{itemize}
+
+\item
+	\ressubheading{Punjab College}{Lahore, PK}{Intermediate Computer Science}{2008 - 2010}
+	\begin{itemize}	
+		\resitem{Graduated with a 76\% average}
+	\end{itemize}
+
+\item
+	\ressubheading{Khayaban Public School}{Lahore, PK}{Matriculation}{1999 - 2008}
+	\begin{itemize}
+		\resitem{Graduated with a 84.4\% average}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skill Set}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+		\resitem{Programming Languages (C, C++, C\#, JAVA, Object Oriented Programming)}
+	\resitem{Operating Systems}
+	\resitem{Command on LINUX based Operating Systems}
+	\resitem{Internet Programming/Web Development (MVC, JSP, CSS, HTML, Javascript, Jquery)}
+	\resitem{Database Systems}
+	\resitem{Assembly Language}
+	\resitem{Source Code Management System (git)}
+	\resitem{Skills in Communication and Business Writing.}
+	\resitem{Parallel Computation (MPI, openMP) }
+	\resitem{Computer Networks (Datacenter Networks)}
+	\resitem{Microsoft Office Applications (Word, Excel, PowerPoint)}
+	\resitem{Equally comfortable working individually as well as a team member.}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards \& Achievments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+		\resitem{First position certificate in PUCIT Junior Programming Competition (2011)}
+	\resitem{Scholarship in Punjab College of IT for having above 80\% in Matriculation.}
+	\resitem{PUCIT Semester Scholarship (based on annual academic performance in university system).}
+	\resitem{Awarded Laptop by Government of Punjab for maintaining above 70\% of Grade Point Average during university education}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{ {\bf Simpletron (Machine Language Simulator)} -- C++ (Programming Fundamentals)}
+	\resitem{ {\bf Paranoid (Game)}  -- Intel 8086 Assembly (Computer Organization \& Assembly Language)}
+	\resitem{ {\bf Online RSS Reader}  -- JSP (Internet Programming)}
+	\resitem{ {\bf Road Sign Detection} –- C++, OpenCV, Computer Vision (Artificial Intelligence Project)}
+	\resitem{ {\bf Research Project} –- Routing in Data Center Network}
+	\resitem{ {\bf Shopping Center} –- C\#, MVC (Enterprise Application Development)}
+	\resitem{ {\bf Survey Report on Hospital} -- Technical and Business Writing}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Hobbies \& Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\resitem{Video Games}
+	\resitem{Programming}
+	\resitem{Music}
+	\resitem{Web Surfing}
+\end{itemize}
+
+
+{\vfill \footnotesize references are available upon request \hfill \today}
+
+\end{document}
